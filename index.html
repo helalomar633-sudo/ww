@@ -67,13 +67,13 @@
     </header>
 
     <section id="products" class="max-w-7xl mx-auto px-6 py-20">
-        <h2 class="text-4xl font-bold mb-12 text-center">خدماتنا ومشاريعنا البرمجية (50 خدمة)</h2>
+        <h2 class="text-4xl font-bold mb-12 text-center">خدماتنا ومشاريعنا البرمجية</h2>
         <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             </div>
     </section>
 
     <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 bg-[#080808]">
-        <h2 class="text-4xl font-bold mb-12 text-center">معرض أعمالنا (80 عمل)</h2>
+        <h2 class="text-4xl font-bold mb-12 text-center">معرض أعمالنا</h2>
         <div id="portfolio-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
             </div>
     </section>
@@ -124,14 +124,18 @@
     </footer>
 
     <script>
-        // مصفوفة الخدمات مع الصور والوصف المخصص لكل نوع
+        // مصفوفة الخدمات الفريدة مع صور مناسبة لكل عنوان
         const projectData = [
             {
                 title: "متجر إلكتروني متكامل",
                 desc: "منصة بيع متطورة تدعم الدفع الإلكتروني وتتبع الشحنات مع لوحة تحكم ذكية.",
                 img: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=500&q=80"
             },
-         
+            {
+                title: "تطبيق توصيل طلبات",
+                desc: "نظام متكامل لربط المطاعم والمناديل والعملاء مع خرائط تتبع مباشرة.",
+                img: "https://images.unsplash.com/photo-1526367790999-0150786486a9?auto=format&fit=crop&w=500&q=80"
+            },
             {
                 title: "نظام إدارة مستشفيات",
                 desc: "إدارة شاملة للمرضى، المواعيد، والسجلات الطبية بأعلى معايير الأمان.",
@@ -157,7 +161,11 @@
                 desc: "إدارة المالية، الفواتير الضريبية، والتقارير المحاسبية من أي مكان في العالم.",
                 img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80"
             },
-    
+            {
+                title: "موقع حجز فنادق",
+                desc: "نظام حجز ذكي للفنادق والشقق مع محرك بحث وتوافر الغرف اللحظي.",
+                img: "https://images.unsplash.com/photo-1451238180443-af2184c3f90e?auto=format&fit=crop&w=500&q=80"
+            },
             {
                 title: "تطبيق لياقة بدنية",
                 desc: "برامج تدريبية مخصصة، تتبع السعرات، وتواصل مباشر مع المدربين المحترفين.",
@@ -178,7 +186,11 @@
                 desc: "ربط أصحاب العمل بالباحثين عن وظائف مع نظام فلترة السير الذاتية.",
                 img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=500&q=80"
             },
-            
+            {
+                title: "تطبيق خدمات منزلية",
+                desc: "حجز الفنيين (سباكة، كهرباء، نظافة) بضغطة زر مع نظام تقييمات.",
+                img: "https://images.unsplash.com/photo-1581578731522-7b7547c6a21f?auto=format&fit=crop&w=500&q=80"
+            },
             {
                 title: "لوحة تحكم ذكية",
                 desc: "تحليل البيانات الضخمة وعرضها في رسوم بيانية تفاعلية لاتخاذ القرارات.",
@@ -198,9 +210,8 @@
 
         const productsContainer = document.getElementById('products-container');
         
-        // توليد 50 خدمة باستخدام البيانات المعرفة
-        for (let i = 1; i <= 50; i++) {
-            const data = projectData[i % projectData.length];
+        // عرض النسخ الفريدة فقط (تم إزالة التكرار)
+        projectData.forEach((data, index) => {
             const price = (Math.random() * 500 + 150).toFixed(2);
             
             productsContainer.innerHTML += `
@@ -210,7 +221,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-60"></div>
                     </div>
                     <div class="p-5 flex-grow flex flex-col">
-                        <h3 class="font-bold mb-2 text-lg text-blue-400">${data.title} #${i}</h3>
+                        <h3 class="font-bold mb-2 text-lg text-blue-400">${data.title}</h3>
                         <p class="text-sm text-gray-400 mb-6 flex-grow leading-relaxed">
                             ${data.desc} يتميز المشروع بكود نظيف، أداء سريع، وتجربة مستخدم لا مثيل لها.
                         </p>
@@ -221,9 +232,9 @@
                     </div>
                 </div>
             `;
-        }
+        });
 
-        // توليد معرض الأعمال (80 عمل)
+        // معرض الأعمال (تم الحفاظ على العدد المطلوب 80 عمل فريد باستخدام معرفات عشوائية)
         const portfolioContainer = document.getElementById('portfolio-container');
         for (let i = 1; i <= 80; i++) {
             portfolioContainer.innerHTML += `
