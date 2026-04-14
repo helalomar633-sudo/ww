@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevStore | متجرك للحلول الرقمية</title>
+    <title>Vireon | وجهتك للحلول الرقمية الاحترافية</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #050505; /* أسود غامق جداً */
+            background-color: #050505;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
         .gradient-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
@@ -22,107 +23,136 @@
             transition: all 0.3s ease;
         }
         .card-glass:hover {
-            border-color: #6366f1; /* بنفسجي */
+            border-color: #6366f1;
             transform: translateY(-5px);
         }
         .btn-primary {
             background: linear-gradient(90deg, #1d4ed8, #6366f1);
         }
+        .social-icon {
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icon:hover {
+            color: #6366f1;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            DevStore
+    <nav class="sticky top-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-gray-800 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+                Vireon
+            </div>
+            <ul class="hidden md:flex space-x-reverse space-x-8 text-gray-300">
+                <li><a href="#" class="hover:text-blue-400">الرئيسية</a></li>
+                <li><a href="#products" class="hover:text-blue-400">المنتجات</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-400">أعمالنا</a></li>
+                <li><a href="#about" class="hover:text-blue-400">من نحن</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">تواصل معنا</a></li>
+            </ul>
+            <a href="https://wa.me/201221546924" class="btn-primary px-6 py-2 rounded-full font-bold">اطلب الآن</a>
         </div>
-        <ul class="hidden md:flex space-x-reverse space-x-8 text-gray-300">
-            <li><a href="#" class="hover:text-blue-400">الرئيسية</a></li>
-            <li><a href="#products" class="hover:text-blue-400">المنتجات</a></li>
-            <li><a href="#portfolio" class="hover:text-blue-400">أعمالنا</a></li>
-            <li><a href="#about" class="hover:text-blue-400">من نحن</a></li>
-        </ul>
-        <button class="btn-primary px-6 py-2 rounded-full font-bold">ابدأ الآن</button>
     </nav>
 
-    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <header class="max-w-7xl mx-auto px-6 py-24 text-center">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            We Build <span class="text-blue-500">Professional</span> Websites <br> 
-            That Grow Your <span class="text-purple-500">Business</span>
+            مرحباً بك في <span class="text-blue-500">Vireon</span> <br> 
+            نبتكر <span class="text-purple-500">المستقبل</span> الرقمي
         </h1>
         <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-            نحول أفكارك إلى واقع رقمي مبهر. تصفح مواقعنا الجاهزة أو اطلب تصميمك المخصص الآن بأعلى جودة.
+            نحن متخصصون في بناء الحلول البرمجية الأكثر تطوراً. من المواقع الجاهزة إلى الأنظمة المعقدة، Vireon هي شريكك للنجاح.
         </p>
-        <div class="flex justify-center gap-4">
-            <a href="#products" class="btn-primary px-8 py-4 rounded-lg font-bold text-lg">اطلب موقعك الآن</a>
-            <a href="#portfolio" class="border border-purple-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-900/20">رؤية أعمالنا</a>
+    </header>
+
+    <section id="products" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold mb-12 text-center">منتجاتنا الرقمية (50 منتج)</h2>
+        <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </div>
+    </section>
+
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 bg-[#080808]">
+        <h2 class="text-4xl font-bold mb-12 text-center">معرض أعمالنا (80 عمل)</h2>
+        <div id="portfolio-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Programming" class="rounded-2xl shadow-2xl shadow-blue-500/20">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-6">عن شركة Vireon</h2>
+                <div class="text-gray-300 space-y-4 text-lg">
+                    <p>شركة Vireon هي رائدة في مجال التحول الرقمي، حيث نسعى لتقديم حلول برمجية مبتكرة تلبي تطلعات السوق العالمي. نحن نؤمن بأن الكود ليس مجرد أسطر برمجية، بل هو فن نبني به جسور التواصل بين أفكارك وعملائك في كل مكان.</p>
+                    <p>نضم فريقاً من المطورين والمصممين المحترفين الذين يعملون بشغف لضمان أعلى مستويات الجودة والأمان. سواء كنت تبحث عن موقع تجارة إلكترونية أو منصة تعليمية، نحن هنا لنحول رؤيتك إلى واقع رقمي ملموس وناجح.</p>
+                </div>
+                <div class="flex space-x-reverse space-x-6 mt-8">
+                    <a href="https://wa.me/201221546924" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 card-glass rounded-2xl text-center">
-            <i class="fas fa-bolt text-3xl text-blue-500 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">سرعة التنفيذ</h3>
-            <p class="text-gray-400">نلتزم بتسليم مشاريعك في وقت قياسي دون المساومة على الجودة.</p>
-        </div>
-        <div class="p-6 card-glass rounded-2xl text-center">
-            <i class="fas fa-paint-brush text-3xl text-purple-500 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">تصميم احترافي</h3>
-            <p class="text-gray-400">واجهات عصرية تركز على تجربة المستخدم وجمالية التفاصيل.</p>
-        </div>
-        <div class="p-6 card-glass rounded-2xl text-center">
-            <i class="fas fa-headset text-3xl text-blue-500 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">دعم فني مستمر</h3>
-            <p class="text-gray-400">نحن معك دائماً لضمان عمل موقعك بكفاءة عالية طوال الوقت.</p>
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-4xl font-bold mb-12">تواصل معنا</h2>
+        <div class="card-glass p-10 rounded-3xl">
+            <div class="space-y-8">
+                <div class="flex items-center justify-center gap-4">
+                    <i class="fab fa-whatsapp text-3xl text-green-500"></i>
+                    <span class="text-2xl">01221546924</span>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <i class="fas fa-envelope text-3xl text-blue-500"></i>
+                    <span class="text-xl">helalomar633@gmail.com</span>
+                </div>
+            </div>
+            <div class="flex justify-center gap-8 mt-12">
+                <a href="https://wa.me/201221546924" class="text-4xl hover:text-green-500 transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="text-4xl hover:text-blue-400 transition-colors"><i class="fab fa-telegram"></i></a>
+            </div>
         </div>
     </section>
 
-    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-3xl font-bold mb-12 text-center underline decoration-purple-500 decoration-4 underline-offset-8">أعمالنا (Portfolio)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="card-glass rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80" alt="Clinic Project" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">موقع عيادة متطور</h3>
-                    <p class="text-gray-400 text-sm mb-4">نظام متكامل لحجز المواعيد وإدارة المرضى مع واجهة مريحة.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Responsive</span>
-                        <span class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded">Booking System</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-glass rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=500&q=80" alt="Courses Platform" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">منصة كورسات تعليمية</h3>
-                    <p class="text-gray-400 text-sm mb-4">لوحة تحكم للمعلمين والطلاب مع دعم كامل لرفع الدروس.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded">SEO Friendly</span>
-                        <span class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded">Dashboard</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-glass rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Booking System" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">نظام حجز فنادق</h3>
-                    <p class="text-gray-400 text-sm mb-4">تصميم أنيق لعرض الغرف وتتبع الحجوزات مع خريطة تفاعلية.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Modern UI</span>
-                        <span class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded">Fast Performance</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="border-t border-gray-800 mt-20 py-10 text-center text-gray-500">
-        <p>© 2026 DevStore. All rights reserved.</p>
+    <footer class="border-t border-gray-800 py-10 text-center text-gray-500">
+        <p>© 2026 Vireon. جميع الحقوق محفوظة.</p>
     </footer>
 
+    <script>
+        // سكربت لإنشاء المنتجات والأعمال تلقائياً لملء الصفحة
+        const productsContainer = document.getElementById('products-container');
+        for (let i = 1; i <= 50; i++) {
+            productsContainer.innerHTML += `
+                <div class="card-glass p-4 rounded-xl">
+                    <div class="h-40 bg-gray-800 rounded-lg mb-4 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-box-open text-4xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">منتج رقم ${i}</h3>
+                    <p class="text-sm text-gray-400 mb-4">وصف مختصر للمنتج الرقمي والخدمات البرمجية المقدمة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-400 font-bold">${(Math.random() * 100 + 10).toFixed(2)} $</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-xs">شراء الآن</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        const portfolioContainer = document.getElementById('portfolio-container');
+        for (let i = 1; i <= 80; i++) {
+            portfolioContainer.innerHTML += `
+                <div class="relative group overflow-hidden rounded-lg h-48 card-glass">
+                    <img src="https://picsum.photos/400/300?random=${i}" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-blue-600/40 transition-opacity">
+                        <span class="font-bold text-sm">مشروع رقم ${i}</span>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
